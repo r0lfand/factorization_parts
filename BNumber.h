@@ -5,8 +5,6 @@
 #define OUT
 
 #define NUM_SIZE 2
-#define MAX_PATH_LENGTH 151
-#define DEFAULT_FILE_PATH "input.txt"
 
 typedef unsigned int element;
 typedef element *p_element;
@@ -32,9 +30,5 @@ typedef struct
 }
 BNumber, *PBNumber;
 */
-int scanFile(OUT p_element numptr);
-int printFile(IN p_element numptr);
-void printConsoleLE(IN p_element numptr);
-void printConsoleBE(IN p_element numptr);
 
 #endif BNUMBER_H

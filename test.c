@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "BNumber.h"
+#include "bnumio.h"
 
 int main()
 {

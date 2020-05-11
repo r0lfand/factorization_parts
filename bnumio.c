@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "BNumber.h"
+#include "bnumio.h"
 
 static int finp(IN char* path, OUT p_element numptr);
 
 int scanFile(OUT p_element numptr)
 {
 	char path[MAX_PATH_LENGTH] = { 0 };
-	char* stdpath = DEFAULT_FILE_PATH;
 	char user;
 
 
@@ -17,13 +17,13 @@ int scanFile(OUT p_element numptr)
 	{
 		printf("Enter path: ");
 		scanf_s("%s", path, sizeof(path)-1);
-		if (finp(numptr, path))
+		if (finp(DEFAULT_FILE_PATH, numptr))
 			return -1;
 	}
 	else if ((user == 'N') || (user == 'n'))
 	{
 		printf("Using standard input.txt...\n");
-		if (finp(numptr, stdpath))
+		if (finp(DEFAULT_FILE_PATH, numptr))
 			return -1;
 	}
 	else
