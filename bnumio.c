@@ -9,7 +9,6 @@ int scanFile(OUT p_element numptr)
 	char path[MAX_PATH_LENGTH] = { 0 };
 	char user;
 
-
 	printf("Do you want to specify input file? Y or N?\n>");
 	user = getchar();
 
@@ -31,7 +30,8 @@ int scanFile(OUT p_element numptr)
 		printf("Unexpected input\n");
 		return -1;
 	}
-
+	
+	return 0;
 }
 
 static int finp(IN char* path, OUT p_element numptr)
@@ -89,4 +89,6 @@ int printFile(IN p_element numptr)
 	{
 		fprintf(fptr,"%X ", numptr[i]);
 	}
+
+	return 0;
 }
