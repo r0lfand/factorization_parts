@@ -1,1 +1,1 @@
-# Wrote basic I/O functions and a test scenario 
+# Input/Output module for our coursework
