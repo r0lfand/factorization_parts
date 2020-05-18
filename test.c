@@ -17,7 +17,7 @@ int main()
 	if (printFile("w",opath,n) < 0)
 		return -1;
 
-	if (appendFile("a",apath, n) < 0)
+	if (printFile("a",apath, n) < 0)
 		return -1;
 
     return 0;

@@ -19,6 +19,28 @@ int scanFile(IN char* path, OUT p_element numptr)
 	}
 
 	fclose(ptr);
+
+	return 0;
+}
+
+
+int printFile(IN char* key, IN char* path,IN p_element numptr)
+{
+	if (key[0] != 'w' && key[0] != 'a')
+		return -2;
+
+	FILE* fptr = fopen(path,key);
+	if (fptr == NULL)
+		return -1;
+
+	for (int i = NUM_SIZE - 1; i >= 0; i--)
+	{
+		fprintf(fptr, "%X ", numptr[i]);
+	}
+	fprintf(fptr, "\n");
+
+	fclose(fptr);
+
 	return 0;
 }
 
@@ -42,41 +64,6 @@ void printConsoleBE(IN p_element numptr)
 }
 
 
-int printFile(IN char* key,IN char* path, p_element numptr)
-{
-	if (key != "w" || key != "w+" || key != "r" || key != "r+")
-		return -2;
-	FILE* fptr = fopen("output.txt", key);
-	if (fptr == NULL)
-		return -1;
-	
-	for (int i = NUM_SIZE - 1; i >= 0; i--)
-	{
-		fprintf(fptr, "%X ", numptr[i]);
-	}
-
-	fclose(fptr);
-
-	return 0;
-}
-
-
-int appendFile(IN char* path, IN p_element numptr)
-{
-	FILE* fptr = fopen("append.txt", "a");
-	if (fptr == NULL)
-		return -1;
-
-	for (int i = NUM_SIZE - 1; i >= 0; i--)
-	{
-		fprintf(fptr, "%X ", numptr[i]);
-	}
-	fprintf(fptr,"\n");
-
-	fclose(fptr);
-
-	return 0;
-}
 
 /*
 {
@@ -111,23 +98,6 @@ int appendFile(IN char* path, IN p_element numptr)
 /*static int finp(IN char* path, OUT p_element numptr)
 {
 
-
-	return 0;
-}*/
-
-/*int printFile(IN p_element numptr)
-{
-	FILE* fptr = fopen("output.txt", "w+");
-	if (fptr == NULL)
-	{
-		printf("Can't open output file\n");
-		return -1;
-	}
-
-	for (int i = NUM_SIZE - 1; i >= 0; i--)
-	{
-		fprintf(fptr,"%X ", numptr[i]);
-	}
 
 	return 0;
 }*/
