@@ -22,6 +22,8 @@ int main()
 		return -1;*/
 	sfile(&n);
 	pfile(&n);
+	cprintle(&n);
+	cprintbe(&n);
 
     return 0;
 }

@@ -32,7 +32,7 @@ int sfile(OUT p_element numptr)
 	else
 	{
 		printf("Unexpected input\n");
-		return -1;
+		return -2;
 	}
 
 	return 0;
@@ -70,6 +70,18 @@ int pfile(IN p_element numptr)
 	else
 	{
 		printf("Unexpected input\n");
-		return -1;
+		return -2;
 	}
+}
+
+void cprintle(IN p_element numptr)
+{
+	printf("LE:");
+	printConsoleLE(numptr);
+}
+
+void cprintbe(IN p_element numptr)
+{
+	printf("BE:");
+	printConsoleBE(numptr);
 }
