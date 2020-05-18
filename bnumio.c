@@ -7,7 +7,7 @@ int scanFile(IN char* path, OUT p_element numptr)
 {
 	int i;
 	FILE* ptr = fopen(path, "r");
-	
+
 	if (ptr == NULL)
 	{
 		return -1;
@@ -20,16 +20,14 @@ int scanFile(IN char* path, OUT p_element numptr)
 
 	fclose(ptr);
 
+
 	return 0;
 }
 
 
-int printFile(IN char* key, IN char* path,IN p_element numptr)
+int printFile(IN char* path,IN p_element numptr)
 {
-	if (key[0] != 'w' && key[0] != 'a')
-		return -2;
-
-	FILE* fptr = fopen(path,key);
+	FILE* fptr = fopen(path,"a");
 	if (fptr == NULL)
 		return -1;
 

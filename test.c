@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include "BNumber.h"
 #include "bnumio.h"
+#include "IOInterface.h"
 
 int main()
 {
-	element n[NUM_SIZE];
+	element n[NUM_SIZE];/*
 	char ipath[MAX_PATH_LENGTH] = "input.txt";
 	char opath[MAX_PATH_LENGTH] = "output.txt";
 	char apath[MAX_PATH_LENGTH] = "append.txt";
@@ -18,7 +19,9 @@ int main()
 		return -1;
 
 	if (printFile("a",apath, n) < 0)
-		return -1;
+		return -1;*/
+	sfile(&n);
+	pfile(&n);
 
     return 0;
 }

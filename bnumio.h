@@ -7,13 +7,16 @@
 /************************************************************************************/
 
 #define MAX_PATH_LENGTH 151						
-#define DEFAULT_INPUT_PATH "input.txt"			
+#define DEFAULT_INPUT_PATH "input.txt"
+#define DEFAULT_OUTPUT_PATH "output.txt"
 
 
 /************************************************************************************/
 /*Функция для чтения числа из файла							*/
 /*																					*/
-/*int scanfile(OUT p_element numptr);									*/
+/*int scanFile(IN char* path,OUT p_element numptr);									*/
+/*		Входные параметры: char* path - путь к файлу, из которого			*/
+/*										производить чтение				*/
 /*		Выходные параметры: p_element numptr -									*/
 /*		массив, в который будет помещено число, читаемое из файла				*/
 /*																					*/	
@@ -38,7 +41,7 @@ int scanFile(IN char* path, OUT p_element numptr);
 /*								 0 - число успешно распечатано в файл			*/
 /*																					*/
 /************************************************************************************/
-int printFile(IN char* key, IN char* path,IN p_element numptr);
+int printFile(IN char* path,IN p_element numptr);
 
 
 
