@@ -20,6 +20,7 @@ int main()
 
 	if (printFile("a",apath, n) < 0)
 		return -1;*/
+	
 	sfile(&n);
 	pfile(&n);
 	cprintle(&n);

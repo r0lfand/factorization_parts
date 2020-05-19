@@ -5,11 +5,10 @@
 int sfile(OUT p_element numptr)
 {
 	char path[MAX_PATH_LENGTH] = { 0 };
-	char user = 0;
+	char user;
 
 	printf("Do you want to specify input file? Y or N?\n");
-	user = getchar();
-	getc(stdin); // ловим \n
+	scanf(" %c", &user);
 	if ((user == 'Y') || (user == 'y'))
 	{
 		printf("Enter path:");
@@ -41,13 +40,10 @@ int sfile(OUT p_element numptr)
 int pfile(IN p_element numptr)
 {
 	char path[MAX_PATH_LENGTH] = { 0 };
-	char user;
-	char* usermod[1];
-	
+	char user = 0;
 
 	printf("Do you want to specify output file? Y or N?\n");
-	scanf("%c", &user);
-
+	scanf(" %c", &user);
 	if ((user == 'Y') || (user == 'y'))
 	{
 		printf("Enter path: ");
